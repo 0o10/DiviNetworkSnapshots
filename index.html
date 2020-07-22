@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Divi | Network Snapshots</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="author" content="Divi"/>
+    <meta name="description" content="Download the latest snapshot of the mainnet and testnet for Divi"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Divi | Network Snapshots"/>
+    <meta name="twitter:description" content="Download the latest snapshot of the mainnet and testnet for Divi"/>
+    <meta name="twitter:site" content="@diviproject"/>
+    <meta name="twitter:creator" content="@diviproject"/>
+    <meta property="og:title" content="Divi | Network Snapshots"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:description" content="Download the latest snapshot of the mainnet and testnet for Divi"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/png" href="images/divi-logo.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet"/>
+    <style>
+      body,
+      html {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        font-family: Montserrat, arial;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizelegibility;
+        letter-spacing: 1px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        outline: none;
+      }
+
+      button,
+      input,
+      textarea {
+        font-family: inherit;
+      }
+    </style>
+    <style data-styled="" data-styled-version="5.0.1">
+      .hDLXfa {
+        width: 100%;
+        height: 100%;
+      }
+
+      data-styled.g1[id="Appstyle__App-yv5lkk-0"] {
+        content: "hDLXfa,";
+      }
+
+      .bppewB {
+        width: 100vw;
+        min-height: calc(100vh - 70px);
+      }
+
+      data-styled.g2[id="Appstyle__Container-yv5lkk-1"] {
+        content: "bppewB,";
+      }
+
+      .fFZJgC {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      data-styled.g3[id="Appstyle__ContainerWrap-yv5lkk-2"] {
+        content: "fFZJgC,";
+      }
+
+      .dxYoJO {
+        width: 100%;
+        height: 70px;
+        background: linear-gradient(107deg, rgba(77, 118, 255, 1) 0%, rgba(15, 63, 140, 1) 100%);
+      }
+
+      .dxYoJO div.container-wrap {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        height: 100%;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .dxYoJO div.container-wrap a.brand {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0 15px;
+        height: 100%;
+        color: white;
+      }
+
+      .dxYoJO div.container-wrap a.brand img {
+        width: 50px;
+        height: 50px;
+        margin: 0 15px 0 0;
+      }
+
+      .dxYoJO div.container-wrap a.brand div.brand-tagline {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      .dxYoJO div.container-wrap a.brand h1 {
+        font-weight: 300;
+        font-size: 24px;
+        -webkit-letter-spacing: 2.5px;
+        -moz-letter-spacing: 2.5px;
+        -ms-letter-spacing: 2.5px;
+        letter-spacing: 2.5px;
+      }
+
+      @media (max-width:640px) {
+        .dxYoJO div.container-wrap a.brand {
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+        }
+
+        .dxYoJO div.container-wrap a.brand h1 {
+          font-size: 18px;
+        }
+      }
+
+      data-styled.g4[id="Headerstyle__HeaderStyled-sc-4n11cq-0"] {
+        content: "dxYoJO,";
+      }
+
+      .cwHLGx {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 15px 15px 0;
+      }
+
+      .cwHLGx div.text {
+        padding: 15px;
+        width: calc(100% - 480px);
+      }
+
+      .cwHLGx div.text h2 {
+        font-weight: 700;
+        margin: 0 0 15px;
+      }
+
+      .cwHLGx div.text p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0 0 15px;
+      }
+
+      @media (max-width:640px) {
+        .cwHLGx div.text {
+          width: 100%;
+        }
+      }
+
+      .cwHLGx div.download {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 480px;
+        margin: 30px 0 0;
+      }
+
+      .cwHLGx div.download a.download-button {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background: linear-gradient(107deg, rgba(77, 118, 255, 1) 0%, rgba(15, 63, 140, 1) 100%);
+        color: white;
+        width: 180px;
+        height: 50px;
+        border-radius: 5px;
+        margin: 0 7.5px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .cwHLGx div.download p {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 15px 0;
+      }
+
+      @media (max-width:640px) {
+        .cwHLGx div.download {
+          width: 100%;
+        }
+
+        .cwHLGx div.download a.download-button {
+          margin: 15px 0;
+        }
+      }
+
+      data-styled.g5[id="Indextitle__StyledTitle-sc-1xqopoj-0"] {
+        content: "cwHLGx,";
+      }
+
+      .eAXkDT {
+        padding: 15px;
+      }
+
+      .eAXkDT div.text {
+        padding: 15px;
+        width: 100%;
+      }
+
+      .eAXkDT div.text h2 {
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .eAXkDT div.text p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .eAXkDT div.snippet {
+        margin: 15px;
+        border-radius: 5px;
+        font-family: monospace;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      data-styled.g6[id="Indexcopy__StyledCopy-sc-10etmmd-0"] {
+        content: "eAXkDT,";
+      }
+
+      .dETtDZ {
+        padding: 15px;
+      }
+
+      .dETtDZ div.text {
+        padding: 15px;
+        width: 100%;
+      }
+
+      .dETtDZ div.text h2 {
+        font-weight: 700;
+        margin: 0 0 15px;
+      }
+
+      .dETtDZ div.text p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .dETtDZ div.snapshots {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      .dETtDZ div.snapshots div.snapshot-table {
+        width: 50%;
+        padding: 15px;
+      }
+
+      .dETtDZ div.snapshots div.snapshot-table table {
+        width: 100%;
+      }
+
+      .dETtDZ div.snapshots div.snapshot-table table thead td {
+        font-size: 14px;
+        font-weight: bold;
+        padding: 5px;
+        border-bottom: 2px solid black;
+      }
+
+      .dETtDZ div.snapshots div.snapshot-table table td {
+        font-size: 14px;
+        padding: 5px;
+      }
+
+      .dETtDZ div.snapshots div.snapshot-table table td a {
+        font-weight: bold;
+        color: blue;
+      }
+
+      @media (max-width:640px) {
+        .dETtDZ div.snapshots {
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          width: 100%;
+        }
+
+        .dETtDZ div.snapshots div.snapshot-table {
+          width: 100%;
+        }
+      }
+
+      data-styled.g7[id="Indexhistory__StyledHistory-evnpf4-0"] {
+        content: "dETtDZ,";
+      }
+      pre.codeBlock{
+        color:#c5c8c6;
+        text-shadow:0 1px rgba(0, 0, 0, 0.3);
+        font-family:inconsolata, monaco, consolas, courier new, courier, monospace;
+        direction:ltr;
+        text-align:left;
+        white-space:pre;
+        word-spacing:normal;
+        word-break:normal;
+        line-height:1.5;
+        -moz-tab-size:4;-o-tab-size:4;
+        tab-size:4;
+        -webkit-hyphens:none;
+        -moz-hyphens:none;
+        -ms-hyphens:none;
+        hyphens:none;
+        padding:1em;
+        margin:.5em 0;
+        overflow:auto;
+        border-radius:0.3em;
+        background:#1d1f21
+      }
+      .codeFormat {
+        color:#c5c8c6;
+        text-shadow:0 1px rgba(0, 0, 0, 0.3);
+        font-family:inconsolata, monaco, consolas, courier, monospace;
+        direction:ltr;
+        text-align:left;
+        white-space:pre;
+				word-spacing:normal;
+				word-break:normal;
+				line-height:1.5;
+				-moz-tab-size:4;
+				-o-tab-size:4;
+				tab-size:4;
+				-webkit-hyphens:none;
+				-moz-hyphens:none;
+				-ms-hyphens:none;
+				hyphens:none
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="__next">
+      <div class="Appstyle__App-yv5lkk-0 hDLXfa">
+        <header class="Headerstyle__HeaderStyled-sc-4n11cq-0 dxYoJO">
+          <div class="container-wrap">
+            <a class="brand"><img src="images/divi-logo.png"/>
+              <h1>Network Snapshots</h1>
+            </a>
+          </div>
+        </header>
+        <div class="Appstyle__Container-yv5lkk-1 bppewB">
+          <div class="Appstyle__ContainerWrap-yv5lkk-2 fFZJgC">
+            <div class="Indextitle__StyledTitle-sc-1xqopoj-0 cwHLGx">
+              <div class="text">
+                <h2>Download the Latest Snapshots for Divi</h2>
+                <p>This website hosts the latest snapshots of block data from Divi. The snapshots are updated every 24 hours. We keep track of historical snapshot data as well too.</p>
+                <p>If you&#x27;re cURLing to a server. Right click the link and click the option &quot;Copy Link Address&quot; and then follow the instructions below.</p>
+              </div>
+              <div class="download">
+                <a class="download-button" href="mainnet">Mainnet Zip</a>
+                <a class="download-button" href="testnetsnapshot">Testnet Zip</a>
+                <a class="download-button" href="mainnet">Mainnet Tar</a>
+                <a class="download-button" href="testnetsnapshot">Testnet Tar</a>
+                <p>Last Pull
+                </p>
+              </div>
+            </div>
+            <div class="Indexcopy__StyledCopy-sc-10etmmd-0 eAXkDT">
+              <div class="text">
+                <h2>How To Update Your Chain</h2>
+              </div>
+              <div class="snippet">
+                <pre class = "codeBlock"><code class="codeFormat"><span class="token" style="color:#ffffb6;text-decoration:underline">cd</span> ~/.divi <span class="token" style="color:#7c7c7c"># or wherever your divi data is stored</span>
+<span class="token" style="color:#dad085">curl</span> -k <span class="token" style="color:#c5c8c6">[</span>url of snapshot<span class="token" style="color:#c5c8c6">]</span> -o snapshot.zip
+<span class="token" style="color:#dad085">unzip</span> snapshot.zip -d <span class="token" style="color:#ffffb6;text-decoration:underline">.</span>
+<span class="token" style="color:#dad085">mv</span> blocks blocks_old
+<span class="token" style="color:#dad085">mv</span> chainstate chainstate_old
+<span class="token" style="color:#dad085">unzip</span> blocks-snapshot.zip -d blocks
+<span class="token" style="color:#dad085">unzip</span> chainstate-snapshot.zip -d chainstate</code></pre>
+              </div>
+            </div>
+            <div class="Indexhistory__StyledHistory-evnpf4-0 dETtDZ">
+              <div class="text">
+                <h2>Historical Snapshots</h2>
+              </div>
+              <div class="snapshots">
+                <div class="snapshot-table">
+                  <h3>Mainnet</h3>
+                  <table>
+                    <thead>
+                      <td>Date</td>
+                      <td>Size</td>
+                      <td>~</td>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+                <div class="snapshot-table">
+                  <h3>Testnet</h3>
+                  <table>
+                    <thead>
+                      <td>Date</td>
+                      <td>Size</td>
+                      <td>~</td>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
