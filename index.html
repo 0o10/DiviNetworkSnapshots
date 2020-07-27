@@ -647,13 +647,18 @@
         </div>
       </div>
     </div>
-    <script src="resources/jquery.min.js">
-      window.onload = function() {
-        console.log('test');
-        $("#osx-instructions").show();
-        $("#windows-instructions").hide();
-        $("#linux-instructions").hide();
+    <script src="resources/jquery.min.js"></script>
+    <script>
+      let instructionNames = ["osx-instructions", "windows-instructions", "linux-instructions"]
+      let showOnlyInstruction = (instructionID) => {
+        for(let i in instructionNames){
+          $("#"+instructionNames[i]).hide();
+          if(instructionID === instructionNames[i]){
+            $("#"+instructionID).show();
+          }
+        }
       }
+      showOnlyInstruction("windows-instructions");
     </script>
   </body>
 </html>
