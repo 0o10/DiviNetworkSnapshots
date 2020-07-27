@@ -32,8 +32,6 @@
       }
 
       * {
-        margin: 0;
-        padding: 0;
         box-sizing: border-box;
         text-decoration: none;
         outline: none;
@@ -191,52 +189,39 @@
           width: 100%;
         }
       }
-
-      .cwHLGx div.download {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
+      #download-buttons {
         width: 480px;
-        margin: 30px 0 0;
+      }
+      .buttons-list {
+        display: flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        width:100%;
       }
 
-      .cwHLGx div.download a.download-button {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
+      .gradient-button {
         display: flex;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
         justify-content: center;
         background: linear-gradient(107deg, rgba(77, 118, 255, 1) 0%, rgba(15, 63, 140, 1) 100%);
         color: white;
-        width: 180px;
+        flex-grow:1;
         height: 50px;
         border-radius: 5px;
-        margin: 0 7.5px;
+        margin:7.5px;
         font-size: 18px;
         font-weight: bold;
         cursor: pointer;
+        transition: 1s ease;
       }
 
-      .cwHLGx div.download p {
+      .gradient-button.selected {
+        background: linear-gradient(107deg, rgba(15, 63, 140, 1) 0%, rgba(77, 118, 255, 1) 100%);
+      }
+
+      .download{
         display: block;
         width: 100%;
         text-align: center;
@@ -246,11 +231,11 @@
       }
 
       @media (max-width:640px) {
-        .cwHLGx div.download {
+        .cwHLGx .download {
           width: 100%;
         }
 
-        .cwHLGx div.download a.download-button {
+        .cwHLGx .download .gradient-button {
           margin: 15px 0;
         }
       }
@@ -398,52 +383,277 @@
 				-ms-hyphens:none;
 				hyphens:none
       }
+      .gradient-border {
+        background:linear-gradient(107deg, rgba(77, 118, 255, 1) 0%, rgba(15, 63, 140, 1) 100%);
+        border-radius:5px;
+        padding:5px;
+        margin:0;
+      }
+      .instructions {
+        background-color: white;
+        border-radius:5px;
+        padding:10px;
+      }
+      .instruction-step {
+        margin:50px 20px;
+      }
     </style>
   </head>
 
   <body>
-    <div id="__next">
-      <div class="Appstyle__App-yv5lkk-0 hDLXfa">
-        <header class="Headerstyle__HeaderStyled-sc-4n11cq-0 dxYoJO">
-          <div class="container-wrap">
-            <a class="brand"><img src="resources/images/divi-logo.png"/>
-              <h1>Network Snapshots</h1>
-            </a>
-          </div>
-        </header>
-        <div class="Appstyle__Container-yv5lkk-1 bppewB">
-          <div class="Appstyle__ContainerWrap-yv5lkk-2 fFZJgC">
-            <div class="Indextitle__StyledTitle-sc-1xqopoj-0 cwHLGx">
-              <div class="text">
-                <h2>Download the Latest Snapshots for Divi</h2>
-                <p>This website hosts the latest snapshots of block data from Divi. The snapshots are updated every 24 hours. We keep track of historical snapshot data as well too.</p>
-                <p>If you&#x27;re cURLing to a server. Right click the link and click the option &quot;Copy Link Address&quot; and then follow the instructions below.</p>
-              </div>
-              <div class="download">
-                <a class="download-button" href="/dist/DIVI-snapshot.tar.gz">Mainnet Tar</a>
-                <a class="download-button" href="/dist/DIVI-snapshot.zip">Mainnet Zip</a>
-                <p>Last Pull
-                </p>
+    
+    <div class="Appstyle__App-yv5lkk-0 hDLXfa">
+      <header class="Headerstyle__HeaderStyled-sc-4n11cq-0 dxYoJO">
+        <div class="container-wrap">
+          <a class="brand"><img src="resources/images/divi-logo.png"/>
+            <h1>Network Snapshots</h1>
+          </a>
+        </div>
+      </header>
+      <div class="Appstyle__Container-yv5lkk-1 bppewB">
+        <div class="Appstyle__ContainerWrap-yv5lkk-2 fFZJgC">
+          <div class="Indextitle__StyledTitle-sc-1xqopoj-0 cwHLGx">
+            <div class="text">
+              <h2>Download the Latest Snapshots for Divi</h2>
+              <p>This website hosts the latest snapshots of block data from Divi. The snapshots are updated every 24 hours. We keep track of historical snapshot data as well too.</p>
+              <p>If you&#x27;re cURLing to a server. Right click the link and click the option &quot;Copy Link Address&quot; and then follow the instructions below.</p>
+            </div>
+            <div id="download-buttons">
+              <div class="buttons-list">
+                <a class="gradient-button" href="/dist/DIVI-snapshot.tar.gz">Mainnet Tar</a>
+                <a class="gradient-button" href="/dist/DIVI-snapshot.zip">Mainnet Zip</a>
               </div>
             </div>
-            <div class="Indexcopy__StyledCopy-sc-10etmmd-0 eAXkDT">
-              <div class="text">
-                <h2>How To Update Your Chain</h2>
+          </div>
+          <div class="Indexcopy__StyledCopy-sc-10etmmd-0 eAXkDT">
+            <div class="text">
+              <h2>How To Update Your Chain</h2>
+            </div>
+            <div class="buttons-list" >
+              <h2 id="osx-instructions-button" class="gradient-button">OSX</h2>
+              <h2 id="windows-instructions-button" class="gradient-button">Windows</h2>
+              <h2 id="linux-instructions-button" class="gradient-button">Linux</h2>
+            </div>
+
+            <div class="gradient-border">
+              <div id="osx-instructions" class="instructions">
+                <div class = "instruction-step">
+                  <h2>Part 1</h2>
+                  Download the snapshot zip from above, and once it is finished, double-click the downloaded file. This action will unzip the file and show a folder named DIVI-Snapshot.
+                  <ol>
+                    <li>Inside this folder, you will find 2 subfolders.
+                      <ul>
+                        <li>blocks</li>
+                        <li>chainstate</li>
+                      </ul>
+                    </li>
+                  </ol>
+                  Remember the location of these four folders we will need them in Part 3, Step 1
+                </div>
+                <div class = "instruction-step">
+                  <h2>Part 2</h2>
+                  <ol>
+                    <li>Close Divi Desktop Application (exit, do not minimize, close completely)</li>
+                    <li>Open Finder</li>
+                    <li>Click GO at the top of Finder</li>
+                    <li>Select the "Go to Folder" option in the drop-down list</li>
+                    <li>In the "Go to Folder" Search Bar enter ~/Library/Application Support/ (pay close attention to the placement of the tilda ~ )</li>
+                    <li>Click the blue Go button</li>
+                    <li>Open folder titled "DIVI" (not Divi Desktop)
+                      <ul>
+                        <li>
+                          Keep / Preserve in place the following four items.
+                          <ul>
+                            <li>backups(directory) – Do Not Move</li>
+                            <li>debug.log</li>
+                            <li>masternode.conf – Do Not Move</li>
+                            <li>wallet.dat – Do Not Move</li>
+                            <li>Optional You may or may not have any other wallets with wallet_#######.dat. If you do move them to the backups(directory) above but make sure to keep the file titled "wallet.dat" preserved and in place.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      
+                    </li>
+                    <li>Clean "DIVI" folder by sending all other files, except the above to trash
+                      <ul>
+                        <li>When done all that will be in the folder titled "DIVI" will be
+                          <ul>
+                            <li>backups(directory) – Do Not Move</li>
+                            <li>debug.log</li>
+                            <li>masternode.conf – Do Not Move</li>
+                            <li>wallet.dat – Do Not Move</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+                
+                <div class = "instruction-step">
+                  <h2>Part 3</h2>
+                  Open your DIVI-Snapshot folder from Part 1, Step 1
+                  Move or Copy (2 Folders)
+                  blocks
+                  chainstate
+                  To the "DIVI" Folder you just cleaned above (Part 2, Step 8)
+                  Close Finder Window
+                </div>
+                <div class = "instruction-step">
+                  <h2>Part 4</h2>
+                  Restart Divi Desktop Application
+                  If "Primer" pops up click "Cancel" button
+                  Your Divi Desktop Application will fully sync soon after!
+                </div>
               </div>
-              <div class="snippet">
-                <pre class = "codeBlock"><code class="codeFormat"><span class="token" style="color:#ffffb6;text-decoration:underline">cd</span> ~/.divi <span class="token" style="color:#7c7c7c"># or wherever your divi data is stored</span>
-<span class="token" style="color:#dad085">curl</span> -k <span class="token" style="color:#c5c8c6">[</span>url of snapshot<span class="token" style="color:#c5c8c6">]</span> -o snapshot.zip
-<span class="token" style="color:#dad085">unzip</span> snapshot.zip -d <span class="token" style="color:#ffffb6;text-decoration:underline">.</span>
-<span class="token" style="color:#dad085">mv</span> blocks blocks_old
-<span class="token" style="color:#dad085">mv</span> chainstate chainstate_old
-<span class="token" style="color:#dad085">unzip</span> blocks-snapshot.zip -d blocks
-<span class="token" style="color:#dad085">unzip</span> chainstate-snapshot.zip -d chainstate</code></pre>
+              
+              <div id="windows-instructions" class="instructions">
+                <div class = "instruction-step">
+                <h2>Part 1</h2>
+                  Download the snapshot zip from above, and once it is finished, double-click the downloaded file. This action will unzip the file and show a folder named DIVI-Snapshot.
+                  <ol>
+                    <li>Inside this folder, you will find 2 subfolders.
+                      <ul>
+                        <li>blocks</li>
+                        <li>chainstate</li>
+                      </ul>
+                    </li>
+                  </ol>
+                  Remember the location of these four folders we will need them in Part 3, Step 1
+                </div>
+                <div class = "instruction-step">
+                  <h2>Part 2</h2>
+                  <ol>
+                    <li>Close Divi Desktop Application (exit, do not minimize, close completely)</li>
+                    <li>Press and hold windows key + r key, this will cause a run box to pop up</li>
+                    <li>Type %appdata% in the run box and hit ENTER</li>
+                    <li>Open Divi (leave Divi desktop untouched)
+                      <ul>
+                        <li>Keep / Preserve in place the following four items.</li>
+                        <ul>
+                          <li>backups(directory) – Do Not Move</li>
+                          <li>debug.log</li>
+                          <li>masternode.conf – Do Not Move</li>
+                          <li>wallet.dat – Do Not Move</li>
+                          <li>Optional You may or may not have any other wallets with wallet_#######.dat. If you do move them to the backups(directory) above but make sure to keep the file titled "wallet.dat" preserved and in place.</li>
+                        </ul>
+                      </ul>
+                    </li>
+                    <li>Clean "DIVI" folder by sending all other files, except the above to trash</li>
+                    <li>When done all that will be in the folder titled "DIVI" will be</li>
+                    <li>
+                      <ul>
+                        <li>backups(directory) – Do Not Move</li>
+                        <li>masternode.conf – Do Not Move</li>
+                        <li>wallet.dat – Do Not Move</li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+                <div class = "instruction-step">
+                  <h2>Part 3</h2>
+                  <ol>
+                    <li>Open your DIVI-Snapshot folder from Part 1, Step 1</li>
+                    <li>Move or Copy (2 Folders)
+                      <ul>
+                        <li>blocks</li>
+                        <li>chainstate</li>
+                      </ul>
+                    </li>
+                    <li>To the "DIVI" Folder you just cleaned above (Part 2, Step 8)</li>
+                    <li>Close Window file browser</li>
+                  </ol>
+                </div>
+                <div class="instruction-step">
+                  <h2>Part 4</h2>
+                  <ol>
+                    <li>Restart Divi Desktop Application</li>
+                    <li>If "Primer" pops up click "Cancel" button</li>
+                    <li>Your Divi Desktop Application will fully sync soon after!</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div id="linux-instructions" class="instructions">
+                <div class = "instruction-step">
+                <h2>Part 1</h2>
+                  Download the snapshot zip from above, and once it is finished, double-click the downloaded file. This action will unzip the file and show a folder named DIVI-Snapshot.
+                  <ol>
+                    <li>Inside this folder, you will find 2 subfolders.
+                      <ul>
+                        <li>blocks</li>
+                        <li>chainstate</li>
+                      </ul>
+                    </li>
+                  </ol>
+                  Remember the location of these four folders we will need them in Part 3, Step 1
+                </div>
+                <div class = "instruction-step">
+                  <h2>Part 2</h2>
+                  <ol>
+                    <li>Open Linux Home Directory using File Manger</li>
+                    <li>Search for .divi (if you dont see . (dot files) on Ubuntu Hit CTRL KEY + H KEY and they will show)</li>
+                    <li>Open “.divi” directory (leave Divi-Desktop untouched)
+                      <ul>
+                        <li>Keep / Preserve in place the following four items.
+                          <ul>
+                            <li>backups(directory) – Do Not Move</li>
+                            <li>debug.log</li>
+                            <li>masternode.conf – Do Not Move</li>
+                            <li>wallet.dat – Do Not Move</li>
+                            <li>Optional You may or may not have any other wallets with wallet_#######.dat. If you do move them to the backups(directory) above but make sure to keep the file titled "wallet.dat" preserved and in place.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>Clean "DIVI" folder by sending all other files, except the above to trash
+                      <ul>
+                        <li>When done all that will be in the folder titled "DIVI" will be
+                          <ul>
+                            <li>backups(directory) – Do Not Move</li>
+                            <li>debug.log</li>
+                            <li>masternode.conf – Do Not Move</li>
+                            <li>wallet.dat – Do Not Move</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+                <div class = "instruction-step">
+                  <h2>Part 3</h2>
+                  <ol>
+                    <li>Open your DIVI-Snapshot folder from Part 1, Step 1</li>
+                    <li>Move or Copy (2 Folders)
+                      <ul>
+                        <li>blocks</li>
+                        <li>chainstate</li>
+                      </ul>
+                    </li>
+                    <li>To the "DIVI" Folder you just cleaned above (Part 2, Step 8)</li>
+                    <li>Close Linux file browser</li>
+                  </ol>
+                </div>
+                <div class="instruction-step">
+                  <h2>Part 4</h2>
+                  <ol>
+                    <li>Restart Divi Desktop Application</li>
+                    <li>If "Primer" pops up click "Cancel" button</li>
+                    <li>Your Divi Desktop Application will fully sync soon after!</li>
+                  </ol>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="resources/jquery.min.js">
+      window.onload = () => {
+        console.log('test');
+        $("#osx-instructions").show();
+        $("#windows-instructions").hide();
+        $("#linux-instructions").hide();
+      }
+    </script>
   </body>
-
 </html>
