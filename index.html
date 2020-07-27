@@ -429,7 +429,7 @@
             <div class="text">
               <h2>How To Update Your Chain</h2>
             </div>
-            <div class="buttons-list">
+            <div class="buttons-list" >
               <h2 id="osx-instructions-button" class="gradient-button">OSX</h2>
               <h2 id="windows-instructions-button" class="gradient-button">Windows</h2>
               <h2 id="linux-instructions-button" class="gradient-button">Linux</h2>
@@ -648,10 +648,12 @@
       </div>
     </div>
     <script src="resources/jquery.min.js">
-      if($){
-        console.log("yay");
+      window.onload = () => {
+        console.log('test');
+        $("#osx-instructions").show();
+        $("#windows-instructions").hide();
+        $("#linux-instructions").hide();
       }
     </script>
   </body>
-
 </html>
