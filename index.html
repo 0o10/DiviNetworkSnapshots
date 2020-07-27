@@ -205,7 +205,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(107deg, rgba(77, 118, 255, 1) 0%, rgba(15, 63, 140, 1) 100%);
+        background: linear-gradient(107deg, rgba(15, 63, 140, 1) 0%, rgba(77, 118, 255, 1) 100%);
         color: white;
         flex-grow:1;
         height: 50px;
@@ -214,11 +214,11 @@
         font-size: 18px;
         font-weight: bold;
         cursor: pointer;
-        transition: 1s ease;
+        transition: 0.3s ease;
       }
 
-      .gradient-button.selected {
-        background: linear-gradient(107deg, rgba(15, 63, 140, 1) 0%, rgba(77, 118, 255, 1) 100%);
+      .gradient-button.faded {
+        opacity:0.4;
       }
 
       .download{
@@ -575,9 +575,11 @@
       let showOnlyInstruction = (instructionID) => {
         let findInstruction = "";
         for(let i in instructionNames){
+          $("#"+instructionNames[i]+"-button").addClass("faded");
           $("#"+instructionNames[i]).hide();
           
           if(instructionID === instructionNames[i]){
+            $("#"+instructionNames[i]+"-button").removeClass("faded");
             $("#"+instructionNames[i]).show();
           }
         }
@@ -594,7 +596,27 @@
         showOnlyInstruction("linux-instructions");
       });
 
-      showOnlyInstruction("osx-instructions");
+      function getOS() {
+        var userAgent = window.navigator.userAgent,
+            platform = window.navigator.platform,
+            macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+            windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'];
+            os = null;
+
+        if (macosPlatforms.indexOf(platform) !== -1) {
+          return 'osx';
+        }
+        if (windowsPlatforms.indexOf(platform) !== -1) {
+          return 'windows'
+        }
+        if (/Linux/.test(platform)) {
+          return 'linux';
+        }
+
+        return 'osx';
+      }
+
+      showOnlyInstruction(`${getOS()}-instructions`);
     </script>
   </body>
 </html>
