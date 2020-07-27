@@ -274,68 +274,16 @@
       data-styled.g6[id="Indexcopy__StyledCopy-sc-10etmmd-0"] {
         content: "eAXkDT,";
       }
-
-      .dETtDZ {
-        padding: 15px;
-      }
-
-      .dETtDZ div.text {
-        padding: 15px;
-        width: 100%;
-      }
-
-      .dETtDZ div.text h2 {
-        font-weight: 700;
-        margin: 0 0 15px;
-      }
-
-      .dETtDZ div.text p {
-        font-size: 18px;
-        line-height: 1.5;
-      }
-
-      .dETtDZ div.snapshots {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-      }
-
-      .dETtDZ div.snapshots div.snapshot-table {
-        width: 50%;
-        padding: 15px;
-      }
-
-      .dETtDZ div.snapshots div.snapshot-table table {
-        width: 100%;
-      }
-
-      .dETtDZ div.snapshots div.snapshot-table table thead td {
-        font-size: 14px;
-        font-weight: bold;
-        padding: 5px;
-        border-bottom: 2px solid black;
-      }
-
-      .dETtDZ div.snapshots div.snapshot-table table td {
-        font-size: 14px;
-        padding: 5px;
-      }
-
-      .dETtDZ div.snapshots div.snapshot-table table td a {
-        font-weight: bold;
-        color: blue;
-      }
-
+      
       @media (max-width:640px) {
-        .dETtDZ div.snapshots {
+        div.snapshots {
           -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
           flex-wrap: wrap;
           width: 100%;
         }
 
-        .dETtDZ div.snapshots div.snapshot-table {
+        div.snapshots div.snapshot-table {
           width: 100%;
         }
       }
@@ -388,14 +336,19 @@
         border-radius:5px;
         padding:5px;
         margin:0;
-        overflow:hidden;
+      }
+      .instructions-list {
+        position: relative;
+        width:100%;
+        overflow:auto;
+        display:flexbox;
       }
       .instructions {
         background-color: white;
+        flex-shrink: 0;
+        width:100%;
         border-radius:5px;
         padding:10px;
-        opacity:1;
-        margin-top:0;
       }
       .instruction-step {
         margin:50px 20px;
@@ -438,7 +391,7 @@
               <h2 id="linux-instructions-button" class="gradient-button">Linux</h2>
             </div>
 
-            <div class="gradient-border">
+            <!-- <div class="gradient-border"> -->
               <div id = "instructions-list">
                 <div id="osx-instructions" class="instructions" style="display:none;">
                   <div class = "instruction-step">
@@ -647,7 +600,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -657,7 +610,7 @@
       let instructionNames = ["osx-instructions", "windows-instructions", "linux-instructions"]
       let showOnlyInstruction = (instructionID) => {
         for(let i in instructionNames){
-          $("#"+instructionNames[i]).fadeOut();
+          // $("#"+instructionNames[i]).fadeOut();
           if(instructionID === instructionNames[i]){
             $("#"+instructionID).fadeIn();
           }
@@ -676,6 +629,8 @@
       });
 
       showOnlyInstruction("osx-instructions");
+      showOnlyInstruction("windows-instructions");
+      showOnlyInstruction("linux-instructions");
     </script>
   </body>
 </html>
