@@ -396,6 +396,20 @@
 				-ms-hyphens:none;
 				hyphens:none
       }
+      .gradient-border {
+        background:linear-gradient(107deg, rgba(77, 118, 255, 1) 0%, rgba(15, 63, 140, 1) 100%);
+        border-radius:5px;
+        padding:5px;
+        margin:0;
+      }
+      .instructions {
+        background-color: white;
+        border-radius:5px;
+        padding:10px;
+      }
+      .instruction-step {
+        margin:50px 20px;
+      }
     </style>
   </head>
 
@@ -430,73 +444,75 @@
             </div>
             <div>
               <h2>OSX Manual Snapshot</h2>
-              <div id="osx-instructions" class="instructions">
-                <div class = "instruction-step">
-                  <h3>Part 1</h3>
-                  Download the snapshot zip from above, and once it is finished, double-click the downloaded file. This action will unzip the file and show a folder named DIVI-Snapshot.
-                  <ol>
-                    <li>Inside this folder, you will find 2 subfolders.
-                      <ul>
-                        <li>blocks</li>
-                        <li>chainstate</li>
-                      </ul>
-                    </li>
-                  </ol>
-                  Remember the location of these four folders we will need them in Part 3, Step 1
-                </div>
-                <div class = "instruction-step">
-                  <h3>Part 2</h3>
-                  <ol>
-                    <li>Close Divi Desktop Application (exit, do not minimize, close completely)</li>
-                    <li>Open Finder</li>
-                    <li>Click GO at the top of Finder</li>
-                    <li>Select the "Go to Folder" option in the drop-down list</li>
-                    <li>In the "Go to Folder" Search Bar enter ~/Library/Application Support/ (pay close attention to the placement of the tilda ~ )</li>
-                    <li>Click the blue Go button</li>
-                    <li>Open folder titled "DIVI" (not Divi Desktop)
-                      <ul>
-                        <li>
-                          Keep / Preserve in place the following four items.
-                          <ul>
-                            <li>backups(directory) – Do Not Move</li>
-                            <li>debug.log</li>
-                            <li>masternode.conf – Do Not Move</li>
-                            <li>wallet.dat – Do Not Move</li>
-                            <li>Optional You may or may not have any other wallets with wallet_#######.dat. If you do move them to the backups(directory) above but make sure to keep the file titled "wallet.dat" preserved and in place.</li>
-                          </ul>
-                        </li>
-                      </ul>
-                      
-                    </li>
-                    <li>Clean "DIVI" folder by sending all other files, except the above to trash
-                      <ul>
-                        <li>When done all that will be in the folder titled "DIVI" will be
-                          <ul>
-                            <li>backups(directory) – Do Not Move</li>
-                            <li>debug.log</li>
-                            <li>masternode.conf – Do Not Move</li>
-                            <li>wallet.dat – Do Not Move</li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ol>
-                </div>
-                
-                <div class = "instruction-step">
-                  <h3>Part 3</h3>
-                  Open your DIVI-Snapshot folder from Part 1, Step 1
-                  Move or Copy (2 Folders)
-                  blocks
-                  chainstate
-                  To the "DIVI" Folder you just cleaned above (Part 2, Step 8)
-                  Close Finder Window
-                </div>
-                <div class = "instruction-step">
-                  <h3>Part 4</h3>
-                  Restart Divi Desktop Application
-                  If "Primer" pops up click "Cancel" button
-                  Your Divi Desktop Application will fully sync soon after!
+              <div class="gradient-border">
+                <div id="osx-instructions" class="instructions">
+                  <div class = "instruction-step">
+                    <h2>Part 1</h2>
+                    Download the snapshot zip from above, and once it is finished, double-click the downloaded file. This action will unzip the file and show a folder named DIVI-Snapshot.
+                    <ol>
+                      <li>Inside this folder, you will find 2 subfolders.
+                        <ul>
+                          <li>blocks</li>
+                          <li>chainstate</li>
+                        </ul>
+                      </li>
+                    </ol>
+                    Remember the location of these four folders we will need them in Part 3, Step 1
+                  </div>
+                  <div class = "instruction-step">
+                    <h2>Part 2</h2>
+                    <ol>
+                      <li>Close Divi Desktop Application (exit, do not minimize, close completely)</li>
+                      <li>Open Finder</li>
+                      <li>Click GO at the top of Finder</li>
+                      <li>Select the "Go to Folder" option in the drop-down list</li>
+                      <li>In the "Go to Folder" Search Bar enter ~/Library/Application Support/ (pay close attention to the placement of the tilda ~ )</li>
+                      <li>Click the blue Go button</li>
+                      <li>Open folder titled "DIVI" (not Divi Desktop)
+                        <ul>
+                          <li>
+                            Keep / Preserve in place the following four items.
+                            <ul>
+                              <li>backups(directory) – Do Not Move</li>
+                              <li>debug.log</li>
+                              <li>masternode.conf – Do Not Move</li>
+                              <li>wallet.dat – Do Not Move</li>
+                              <li>Optional You may or may not have any other wallets with wallet_#######.dat. If you do move them to the backups(directory) above but make sure to keep the file titled "wallet.dat" preserved and in place.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        
+                      </li>
+                      <li>Clean "DIVI" folder by sending all other files, except the above to trash
+                        <ul>
+                          <li>When done all that will be in the folder titled "DIVI" will be
+                            <ul>
+                              <li>backups(directory) – Do Not Move</li>
+                              <li>debug.log</li>
+                              <li>masternode.conf – Do Not Move</li>
+                              <li>wallet.dat – Do Not Move</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ol>
+                  </div>
+                  
+                  <div class = "instruction-step">
+                    <h2>Part 3</h2>
+                    Open your DIVI-Snapshot folder from Part 1, Step 1
+                    Move or Copy (2 Folders)
+                    blocks
+                    chainstate
+                    To the "DIVI" Folder you just cleaned above (Part 2, Step 8)
+                    Close Finder Window
+                  </div>
+                  <div class = "instruction-step">
+                    <h2>Part 4</h2>
+                    Restart Divi Desktop Application
+                    If "Primer" pops up click "Cancel" button
+                    Your Divi Desktop Application will fully sync soon after!
+                  </div>
                 </div>
               </div>
             </div>
