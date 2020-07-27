@@ -198,7 +198,6 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
-        margin: 10px;
         width:100%;
       }
 
@@ -208,15 +207,16 @@
         justify-content: center;
         background: linear-gradient(107deg, rgba(77, 118, 255, 1) 0%, rgba(15, 63, 140, 1) 100%);
         color: white;
-        width: 180px;
+        flex-grow:1;
         height: 50px;
         border-radius: 5px;
-        margin: 0 7.5px;
+        margin:7.5px;
         font-size: 18px;
         font-weight: bold;
         cursor: pointer;
         transition: 1s ease;
       }
+
       .gradient-button.selected {
         background: linear-gradient(107deg, rgba(15, 63, 140, 1) 0%, rgba(77, 118, 255, 1) 100%);
       }
@@ -431,8 +431,8 @@
             </div>
             <div class="buttons-list">
               <h2 id="osx-instructions-button" class="gradient-button">OSX</h2>
-
               <h2 id="windows-instructions-button" class="gradient-button">Windows</h2>
+              <h2 id="windows-instructions-button" class="gradient-button">Linux</h2>
             </div>
             <div>
               <div class="gradient-border">
