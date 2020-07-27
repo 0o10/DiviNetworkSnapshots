@@ -658,7 +658,17 @@
           }
         }
       }
-      showOnlyInstruction("windows-instructions");
+      $("#osx-instructions-button").on("click", ()=>{
+        showOnlyInstruction("osx-instructions");
+      });
+
+      $("#windows-instructions-button").on("click", ()=>{
+        showOnlyInstruction("windows-instructions");
+      });
+
+      $("#linux-instructions-button").on("click", ()=>{
+        showOnlyInstruction("linux-instructions");
+      })
     </script>
   </body>
 </html>
