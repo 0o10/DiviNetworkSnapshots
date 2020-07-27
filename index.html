@@ -32,8 +32,6 @@
       }
 
       * {
-        margin: 0;
-        padding: 0;
         box-sizing: border-box;
         text-decoration: none;
         outline: none;
@@ -402,88 +400,103 @@
   </head>
 
   <body>
-    <div id="__next">
-      <div class="Appstyle__App-yv5lkk-0 hDLXfa">
-        <header class="Headerstyle__HeaderStyled-sc-4n11cq-0 dxYoJO">
-          <div class="container-wrap">
-            <a class="brand"><img src="resources/images/divi-logo.png"/>
-              <h1>Network Snapshots</h1>
-            </a>
-          </div>
-        </header>
-        <div class="Appstyle__Container-yv5lkk-1 bppewB">
-          <div class="Appstyle__ContainerWrap-yv5lkk-2 fFZJgC">
-            <div class="Indextitle__StyledTitle-sc-1xqopoj-0 cwHLGx">
-              <div class="text">
-                <h2>Download the Latest Snapshots for Divi</h2>
-                <p>This website hosts the latest snapshots of block data from Divi. The snapshots are updated every 24 hours. We keep track of historical snapshot data as well too.</p>
-                <p>If you&#x27;re cURLing to a server. Right click the link and click the option &quot;Copy Link Address&quot; and then follow the instructions below.</p>
-              </div>
-              <div class="download">
-                <a class="download-button" href="/dist/DIVI-snapshot.tar.gz">Mainnet Tar</a>
-                <a class="download-button" href="/dist/DIVI-snapshot.zip">Mainnet Zip</a>
-                <p>Last Pull
-                </p>
-              </div>
+    
+    <div class="Appstyle__App-yv5lkk-0 hDLXfa">
+      <header class="Headerstyle__HeaderStyled-sc-4n11cq-0 dxYoJO">
+        <div class="container-wrap">
+          <a class="brand"><img src="resources/images/divi-logo.png"/>
+            <h1>Network Snapshots</h1>
+          </a>
+        </div>
+      </header>
+      <div class="Appstyle__Container-yv5lkk-1 bppewB">
+        <div class="Appstyle__ContainerWrap-yv5lkk-2 fFZJgC">
+          <div class="Indextitle__StyledTitle-sc-1xqopoj-0 cwHLGx">
+            <div class="text">
+              <h2>Download the Latest Snapshots for Divi</h2>
+              <p>This website hosts the latest snapshots of block data from Divi. The snapshots are updated every 24 hours. We keep track of historical snapshot data as well too.</p>
+              <p>If you&#x27;re cURLing to a server. Right click the link and click the option &quot;Copy Link Address&quot; and then follow the instructions below.</p>
             </div>
-            <div class="Indexcopy__StyledCopy-sc-10etmmd-0 eAXkDT">
-              <div class="text">
-                <h2>How To Update Your Chain</h2>
-              </div>
-              <div>
-                <h1>OSX Manual Snapshot</h1>
-                <div id="osx-instructions" class="instructions">
-                  <a class="download-button" href="/dist/DIVI-snapshot.zip">DIVI-Snapshot.zip</a>
-                  <div class = "instruction-step">
-                    <h3>Part 1</h3>
-                    Download the snapshot file called DIVI-Snapshot.zip and double-click. This action will unzip the file and show a folder named DIVI-Snapshot.
-                    <ol>
-                      <li>Inside this folder, you will find 2 subfolders.
-                        <ul>
-                          <li>blocks</li>
-                          <li>chainstate</li>
-                        </ul>
-                      </li>
-                    </ol>
-                    Remember the location of these four folders we will need them in Part 3, Step 1
-                  </div>
-                  <div class = "instruction-step">
-                    <h3>Part 2</h3>
-                    Close Divi Desktop Application (exit, do not minimize, close completely)
-                    Open Finder
-                    Click GO at the top of Finder
-                    Select the "Go to Folder" option in the drop-down list
-                    In the "Go to Folder" Search Bar enter ~/Library/Application Support/ (pay close attention to the placement of the tilda ~ )
-                    Click the blue Go button
-                    Open folder titled "DIVI" (not Divi Desktop)
-                    Keep / Preserve in place the following four items.
-                    backups(directory) – Do Not Move
-                    debug.log
-                    masternode.conf – Do Not Move
-                    wallet.dat – Do Not Move
-                    Optional You may or may not have any other wallets with wallet_#######.dat. If you do move them to the backups(directory) above but make sure to keep the file titled "wallet.dat" preserved and in place.
-                    Clean "DIVI" folder by sending all other files, except the above to trash
-                    When done all that will be in the folder titled "DIVI" will be
-                    backups(directory) – Do Not Move
-                    debug.log
-                    masternode.conf – Do Not Move
-                    wallet.dat – Do Not Move
-                  </div>
-                  <div class = "instruction-step">
-                    <h3>Part 3</h3>
-                    Open your DIVI-Snapshot folder from Part 1, Step 1
-                    Move or Copy (2 Folders)
-                    blocks
-                    chainstate
-                    To the "DIVI" Folder you just cleaned above (Part 2, Step 8)
-                    Close Finder Window
-                  </div>
-                  <div class = "instruction-step">
-                    <h3>Part 4</h3>
-                    Restart Divi Desktop Application
-                    If "Primer" pops up click "Cancel" button
-                    Your Divi Desktop Application will fully sync soon after!
-                  </div>
+            <div class="download">
+              <a class="download-button" href="/dist/DIVI-snapshot.tar.gz">Mainnet Tar</a>
+              <a class="download-button" href="/dist/DIVI-snapshot.zip">Mainnet Zip</a>
+              <p>Last Pull
+              </p>
+            </div>
+          </div>
+          <div class="Indexcopy__StyledCopy-sc-10etmmd-0 eAXkDT">
+            <div class="text">
+              <h2>How To Update Your Chain</h2>
+            </div>
+            <div>
+              <h2>OSX Manual Snapshot</h2>
+              <div id="osx-instructions" class="instructions">
+                <div class = "instruction-step">
+                  <h3>Part 1</h3>
+                  Download the snapshot zip from above, and once it is finished, double-click the downloaded file. This action will unzip the file and show a folder named DIVI-Snapshot.
+                  <ol>
+                    <li>Inside this folder, you will find 2 subfolders.
+                      <ul>
+                        <li>blocks</li>
+                        <li>chainstate</li>
+                      </ul>
+                    </li>
+                  </ol>
+                  Remember the location of these four folders we will need them in Part 3, Step 1
+                </div>
+                <div class = "instruction-step">
+                  <h3>Part 2</h3>
+                  <ol>
+                    <li>Close Divi Desktop Application (exit, do not minimize, close completely)</li>
+                    <li>Open Finder</li>
+                    <li>Click GO at the top of Finder</li>
+                    <li>Select the "Go to Folder" option in the drop-down list</li>
+                    <li>In the "Go to Folder" Search Bar enter ~/Library/Application Support/ (pay close attention to the placement of the tilda ~ )</li>
+                    <li>Click the blue Go button</li>
+                    <li>Open folder titled "DIVI" (not Divi Desktop)
+                      <ul>
+                        <li>
+                          Keep / Preserve in place the following four items.
+                          <ul>
+                            <li>backups(directory) – Do Not Move</li>
+                            <li>debug.log</li>
+                            <li>masternode.conf – Do Not Move</li>
+                            <li>wallet.dat – Do Not Move</li>
+                            <li>Optional You may or may not have any other wallets with wallet_#######.dat. If you do move them to the backups(directory) above but make sure to keep the file titled "wallet.dat" preserved and in place.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      
+                    </li>
+                    <li>Clean "DIVI" folder by sending all other files, except the above to trash
+                      <ul>
+                        <li>When done all that will be in the folder titled "DIVI" will be
+                          <ul>
+                            <li>backups(directory) – Do Not Move</li>
+                            <li>debug.log</li>
+                            <li>masternode.conf – Do Not Move</li>
+                            <li>wallet.dat – Do Not Move</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+                
+                <div class = "instruction-step">
+                  <h3>Part 3</h3>
+                  Open your DIVI-Snapshot folder from Part 1, Step 1
+                  Move or Copy (2 Folders)
+                  blocks
+                  chainstate
+                  To the "DIVI" Folder you just cleaned above (Part 2, Step 8)
+                  Close Finder Window
+                </div>
+                <div class = "instruction-step">
+                  <h3>Part 4</h3>
+                  Restart Divi Desktop Application
+                  If "Primer" pops up click "Cancel" button
+                  Your Divi Desktop Application will fully sync soon after!
                 </div>
               </div>
             </div>
